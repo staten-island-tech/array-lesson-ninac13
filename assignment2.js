@@ -8,3 +8,19 @@ const products = [
     { name: 'Desk', price: 450, category: 'Furniture', rating: 4.8 }
   ];
 
+const productDetails = products
+  .forEach((product)=>console.log(product.name, product.price));
+
+console.log(productDetails);
+
+const increasePrice = products.forEach(product=>{
+  return (product.price*1.1);
+});
+
+const categories = [];
+products.forEach(product => {
+  if (!categories.includes(product.category)) {
+    categories.push(product.category);
+  }
+});
+console.log('Unique Categories:', categories);
