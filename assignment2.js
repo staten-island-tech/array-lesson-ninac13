@@ -13,14 +13,6 @@ const productDetails = products
 
 console.log(productDetails);
 
-const increasePrice = products.forEach(product=>{
-  return (product.price*1.1);
-});
-
-const categories = [];
-products.forEach(product => {
-  if (!categories.includes(product.category)) {
-    categories.push(product.category);
-  }
-});
-console.log('Unique Categories:', categories);
+const increasePrice = products
+  .forEach((product)=>product.price*1.1);
+console.log(increasePrice);
